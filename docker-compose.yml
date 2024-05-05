@@ -5,8 +5,7 @@ services:
     image: express-app
     build: ./express-app
     container_name: express-app
-    ports:
-        - 8080:8080
+
     restart: unless-stopped
 
   watchtower:
