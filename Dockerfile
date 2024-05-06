@@ -1,7 +1,7 @@
-FROM node:16
+FROM docker:latest
 
-COPY . .
+WORKDIR /usr/src/app
 
-RUN npm install
+COPY script.sh .
 
-CMD node index.js
+ENTRYPOINT ["/script.sh"]
